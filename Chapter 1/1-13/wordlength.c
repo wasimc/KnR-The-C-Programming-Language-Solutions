@@ -79,11 +79,11 @@ int main(void)
     /* print a line per count result */
     for (i = 0; i < maxval; ++i) {
         printf(" %2d |", maxval - i);
-        for (j = 0; j <= MAXWORDLEN; ++j) {
-            if (length[j] >= maxval - i)
-                printf("  #");
+        for (j = MAXWORLEN; j > 0; --j) {
+            if (length[i] < j)
+                printf("  ");
             else
-                printf("   ");
+                printf(" #");
         }
         printf("\n");
     }
