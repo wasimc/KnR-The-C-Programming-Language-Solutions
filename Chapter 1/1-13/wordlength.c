@@ -80,7 +80,7 @@ int main(void)
     for (i = 0; i < maxval; ++i) {
         printf(" %2d |", maxval - i);
         for (j = 0; j <= MAXWORDLEN; ++j) {
-            if (length[j] >= maxval - i)
+            if (length[j] + i > maxval)
                 printf("  #");
             else
                 printf("   ");
